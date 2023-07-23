@@ -1,0 +1,23 @@
+.text {
+    /* margin-left: 180px; */
+    font-size: 1.7rem;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 50px;
+    /* margin-top: 100px; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+}
+
+@media(max-width:650px) {
+    .container {
+        flex-direction: column;
+        /* margin: 25px 0; */
+    }
+}

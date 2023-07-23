@@ -1,12 +1,10 @@
-import Counter from "../../components/Counter";
-import Users from "../../components/Users";
-// import Products from "../../components/Products";
+import HomePage from "../../components/templates/HomePage";
+import "./globals.css"
 
 export default function Home() {
   return (
     <>
-    <Counter />
-    <Users />
+    <HomePage />
     </>
   )
 }

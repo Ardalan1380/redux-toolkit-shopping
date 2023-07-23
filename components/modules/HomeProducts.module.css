@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 3px 4px 3.2px hsl(216, 52%, 36%);
+    padding: 60px 20px;
+    border-radius: 5px;
+    /* flex-wrap: wrap; */
+    transition: all ease-in 0.2s;
+}
+
+
+
+.main img {
+    width: 100px;
+    /* margin-bottom: 20px; */
+    margin-left: 40px;
+    
+}
+
+.main h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.pr {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pr p {
+    font-weight: 600;    
+    font-size: 1.2rem;
+}
+
+.container:hover {
+    box-shadow: 2.5px 3.5px 4px 4.2px hsl(216, 52%, 36%);
+    
+}
+
+
+@media(max-width:650px) {
+    .container {
+        margin: 25px 0;
+    }
+}
