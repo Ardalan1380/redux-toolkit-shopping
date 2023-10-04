@@ -6,7 +6,6 @@ import { filterProducts , sortProducts , loadProducts} from '../../redux/featuer
 import Error from '../shared/Error';
 import Loader from '../shared/Loader';
 import List from './List';
-import GridProduct from './Grid';
 import Grid from './Grid';
 import styles from "./Products.module.css";
 

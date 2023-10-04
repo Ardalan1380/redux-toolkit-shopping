@@ -87,6 +87,8 @@
 
     .cart__content {
         flex-direction: column;
+        display: flex;
+        margin: auto;
     }
     
     .cart__link {
@@ -95,5 +97,11 @@
         display: flex;
         margin: auto;
         gap: 2rem;
+    }
+    .buy {
+        margin: 20px auto;
+    }
+    .clear {
+        margin-bottom: 60px;
     }
 }
