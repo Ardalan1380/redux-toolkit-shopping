@@ -3,11 +3,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     gap: 1rem 5rem;
-    margin-left: 100px;
+    /* margin-left: 90px; */
     /* min-height: 35rem; */
     width: fit-content;
-    place-content: center;
-    /* margin: auto 20px; */
 }
 
 .container article {
@@ -71,14 +69,13 @@
         /* justify-content: center;
         align-items: center;
         margin: auto; */
-        margin-left: 0;
     }
 
     .container article {
         box-shadow: 2px 3px 4px 1.2px rgb(44, 82, 140);
         display: grid;
         place-items: center;
-        margin: 10px 50px;
+        margin: 10px 35px;
         /* margin: auto; */
         /* margin-left: 80px; */
         /* margin: auto; */

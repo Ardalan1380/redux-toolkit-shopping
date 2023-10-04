@@ -13,12 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Providers> 
-          <Navbar />
+          <Navbar />  
           {children}
           <Footer />
         </Providers>
         
-        {/* <p className="text-red-600">Heloooooo</p> */}
         </body>
     </html>
   )

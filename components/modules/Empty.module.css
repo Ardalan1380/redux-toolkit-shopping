@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.items {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.items h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.items button {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all ease-in 0.2s;
+    border: 2px solid blue;
+    margin-top: 35px;
+}
+
+.items button:hover {
+    background-color: blue;
+    color: #fff;
+}

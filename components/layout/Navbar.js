@@ -1,20 +1,20 @@
 'use client'
 import Image from 'next/image';
-import React, { useState } from 'react';
-import home from "../../public/img/home.svg"
-import cart from "../../public/img/cart.svg"
-import payment from "../../public/img/payment.svg"
-import styles from "./Navbar.module.css"
+import React, { useState } from 'react';;
+import home from "../../public/img/home.svg";
+import cart from "../../public/img/cart.svg";
+import payment from "../../public/img/payment.svg";
+import styles from "./Navbar.module.css";
 import Link from 'next/link';
-import {FaBars, FaTimes} from "react-icons/fa"
-import logo from "../../public/img/logo.png"
-import { useDispatch } from 'react-redux';
-import { openSidebar } from '../../redux/featuers/sidebar/sidebarSlice';
+import {FaBars, FaTimes} from "react-icons/fa";
+import logo from "../../public/img/logo.png";
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-    const [ham , setHam] = useState(false);
-    const dispatch = useDispatch()
+    const {total_items} = useSelector((state) => state.cart)
+    const [ham , setHam] = useState(true);
     const navbar = !ham ? `${styles["open"]} ${styles.lists}` : styles.lists
+    console.log(total_items)
     return (
         <header className={styles.container}>
             <div className={styles.logo}>
@@ -38,9 +38,16 @@ const Navbar = () => {
                 </Link>
                     </li>
                     <li>
+                        <div className={styles.amount}>
                 <Link href="/payment">
                     <Image src={payment} width={200} height={200} />
+                    {
+                        total_items > 0 && <span className={styles.wave}>{total_items}</span>
+                    }
+                    <span>{total_items}</span>
+                    
                 </Link>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -49,5 +56,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

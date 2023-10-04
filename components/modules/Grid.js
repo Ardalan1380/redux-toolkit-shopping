@@ -1,21 +1,19 @@
-'use client'
-
 import React from 'react';
-
-import styles from "./HomeProducts.module.css"
-import Link from 'next/link';
-
-import { shorthen, shorthen2 } from '../../helper/Function';
+import styles from "./GridProduct.module.css"
+import Image from 'next/image';
 import Stars from './Stars';
+import Link from 'next/link';
 import { truncate } from '../../utils/helper';
 
-const HomeProducts = ({data}) => {
-    // console.log(data)
-    // console.log(data.rating)
-    const {image , title, id, price, rating} = data;
+
+const Grid = ({products}) => {
+    console.log(products)
     return (
-        <div className={styles.container}>
-           <Link href={`/products/${id}`}>
+        <>
+            <div className={styles.container}>
+        {
+            products.map(({title , id, image , price, rating}) => (
+                        <Link href={`/products/${id}`}>
                     <article key={id}>
                             <img  src={image} alt={title}/>
                         <h2>{truncate(title , 25)}</h2>
@@ -27,9 +25,11 @@ const HomeProducts = ({data}) => {
                             </div>  
                     </article>
                         </Link>
-        </div>
+                ))
+            }
+            </div>
+            </>
     );
-    
 };
 
-export default HomeProducts;
+export default Grid;

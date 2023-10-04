@@ -1,0 +1,15 @@
+.empty {
+    color: red;
+    text-align: center;
+    display: grid;
+    /* place-items: center; */
+    left: 40%;
+    font-size: 1.3rem;
+    margin-top: 100px;
+}
+
+@media (max-width:400px) {
+    .empty {
+        margin-bottom: 90px;
+    }
+}

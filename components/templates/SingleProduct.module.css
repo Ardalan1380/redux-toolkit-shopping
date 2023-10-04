@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    max-width: 1000px;
+}
+
+.img {
+    max-width: 15rem;
+    margin: 0 20px;
+    object-fit: contain;
+}
+
+.info {
+    margin-left: 60px;
+    flex-direction: column;
+
+}
+
+.info :nth-child(n) {
+    margin: 6px 0;
+}
+
+.stars {
+   margin-left: -44px;
+}
+
+.btn {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid red;
+    transition: all ease-in 0.2s;
+}
+
+.btn:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.info h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgb(68, 68, 68);
+}
+
+.price {
+    font-size: 1.2rem;
+    color: rgb(25, 133, 25);
+    font-weight: 500;
+}
+
+.price span {
+    color: red;
+}
+
+.category {
+    font-size: 1.2rem;
+    color: rgb(25, 133, 25);
+    font-weight: 500;
+}
+
+.category span {
+    color: #7a7a7a;
+}
+
+.des {
+    font-size: 1.3rem;
+    color: #000000;
+    font-weight: 500;
+}
+
+@media(max-width:600px) {
+    .container {
+        display: grid;
+        place-items: center;
+        width: auto;   
+    }
+
+    .img {
+        max-width: 10rem;
+    }
+
+    .info {
+        padding: 0 3px;
+        margin: 70px 10px;
+    }
+
+    .info h2 {
+        font-size: 1.2rem;
+    }
+
+}

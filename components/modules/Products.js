@@ -6,48 +6,52 @@ import { filterProducts , sortProducts , loadProducts} from '../../redux/featuer
 import Error from '../shared/Error';
 import Loader from '../shared/Loader';
 import List from './List';
-import GridProduct from './GridProduct';
+import GridProduct from './Grid';
+import Grid from './Grid';
+import styles from "./Products.module.css";
 
 const Products = () => {
-
-    const dispatch = useDispatch();
+        const dispatch = useDispatch();
+        const {products , loading , error} = useSelector(state => state.product);
+        const {sort , filters , grid_view , filtered_products} = useSelector(state => state.filter);
+        useEffect(() => {
+            dispatch(fetchProducts())
+        } , [])
+        
     
-    const {loading:loading, error : error, products} = useSelector((state) => state.product);
-
-    // console.log(products)   
-
-    const {filtered_products , grid_view , sort , filters} = useSelector((state) => state.filter);
-    // const {}
     
-    useEffect(() => {
-        dispatch(fetchProducts());
-    } , []);
-
-    useEffect(() => {
-        dispatch(filterProducts());
-        dispatch(sortProducts());
-    },[])
-
+        useEffect(() => {
+            dispatch(loadProducts(products))
+        } , [products]);
+        // console.log(loadProducts(products))
     
-
-    if(error) {
-        return <Error />
-    }
-
-    if(loading) {
-        return <Loader />
-    }
-
-    // if(filtered_products.length < 1) {
-    //     return (
-    //         <h2>Sorry, no products matched your search ...</h2>
-    //     )
-    // }
-
-    if(grid_view === false) {
-        return <List products={filtered_products} />
-    }
-    return <GridProduct products={filtered_products} />
+        useEffect(() => {
+            dispatch(filterProducts());
+            dispatch(sortProducts());
+        },[filters , sort]);
+        
+        if(loading) {
+          return  <Loader />
+        }
+        if(error) {
+            return <Error />
+        }
+    
+        // console.log(filtered_products)
+    
+        if(filtered_products.length < 1) {
+            return (
+                // <h2 style={{fontSize:"1.3rem" , color:"red" , textAlign:"center"}}>No product founded</h2>
+                <h1 className={styles.empty}>No product founded</h1>
+            )
+        }
+    
+        if(grid_view === false) {
+            return <List products={filtered_products} />
+        }
+        
+        return <Grid products={filtered_products} />
+    
 
 };
 

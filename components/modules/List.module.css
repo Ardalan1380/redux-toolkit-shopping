@@ -1,0 +1,87 @@
+.container article {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    background: #fff;
+    border-radius: 5px;
+    transition: all ease 0.3s;
+    padding: 1rem;
+}
+
+.container article:hover {
+    box-shadow: 2px 3px 4px 1.2px rgb(44, 82, 140);
+}
+
+.container img {
+    width:min( 25vw,220px);
+    height: 20rem;
+    object-fit: contain;
+}
+
+.product__info {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.product__info h3 {
+    font-size: 1.4rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #0000ac;
+    min-height: 2.2rem;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #e11d48;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #707070;
+
+}
+
+
+.product__info button {
+    width: max-content;
+    padding: 5px 20px;
+    /* background-color: #0000ac; */
+    /* color: #fff; */
+    font-weight: 600;
+    color: #0000ac;
+    border: 2px solid #0000ac;
+    border-radius: 5px; 
+    transition: all ease-in 0.2s;
+    font-size: 1.2rem;
+}
+
+.product__info button:hover {
+    background-color: #0000ac;
+    color: #fff;
+}
+
+
+@media(max-width:800px)  {
+    .product__info h3 {
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 0.9rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    .product__info button {
+        padding: 2px 10px;
+        font-size: 1rem;
+    }
+}

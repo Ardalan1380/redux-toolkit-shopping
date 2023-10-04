@@ -1,17 +1,16 @@
 "use client"
 
 import React , {useEffect} from 'react';
-import styles from "./Product.module.css"
+import styles from "./Product.module.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../redux/featuers/products/productSlice';
 import { useState } from 'react';
 import { setGridView } from '../../redux/featuers/filter/filterSlice';
-import Grid from '../modules/GridProduct';
+import Grid from '../modules/Grid';
 import List from '../modules/List';
 import Filter from '../modules/Filter';
 import Sort from '../modules/Sort';
 import Products from '../modules/Products';
-
 
 const Product = () => {
     // const dispatch = useDispatch();
@@ -27,15 +26,15 @@ const Product = () => {
     // const dispatch = useDispatch();
 
     return (
-      <div className={styles.container}>
       <main>
+      <div className={styles.container}>
           <Filter />
           <div>
             <Sort />
             <Products />
           </div>
-      </main>
       </div>
+      </main>
     )
 
     // const { category, maxPrice, rating, sortOrder } = useSelector((state) => state.filter);

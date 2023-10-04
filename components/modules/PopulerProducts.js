@@ -17,7 +17,7 @@ const PopulerProducts = () => {
     const {products} = productState;
     const rate = products.filter((product) => product.rating.rate >= 4.5)
     const productSlice = rate.slice(0,3)
-    console.log(productSlice)
+    // console.log(productSlice)
 
     useEffect(() => {
         dispatch(fetchProducts())

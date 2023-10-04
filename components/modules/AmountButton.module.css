@@ -1,0 +1,25 @@
+.container {
+    width: max-content;
+    display: flex;
+    gap: 1rem;
+}
+
+.container button {
+    font-size: 1.6rem;
+    display: inline-block;
+    transform: scale(1);
+}
+
+.container button:active {
+    transform: scale(0.9);
+}
+
+.container span {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.opacity {
+    opacity: 0.5;
+    cursor: auto;
+}
