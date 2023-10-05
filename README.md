@@ -10,7 +10,7 @@ Using suspense for optimization
 
 ## Demo
 See demo on github pages
-[Next js Redux toolkit Fake Store](https://kamalheydari.github.io/react-redux-fake-store/)
+[Next js Redux toolkit Fake Store](https://redux-toolkit-shopping.vercel.app)
 
 ![demo](demo.png)
 
